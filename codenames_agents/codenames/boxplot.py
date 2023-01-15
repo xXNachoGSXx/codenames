@@ -1,6 +1,5 @@
 import numpy as np
 import matplotlib as mpl
-#mpl.use('agg')
 import matplotlib.pyplot as plt
 import csv
 
@@ -19,7 +18,6 @@ with open('30exp_results.csv') as csv_file:
 			data_rows.append(row)
 		line+=1
 
-#set plotting data
 for d in data_rows:
 	dlist = [int(v) for v in d[3:]]
 	plot_data.append(dlist)
@@ -31,4 +29,3 @@ fig = plt.figure(1,figsize=(10,6))
 ax = fig.add_subplot(111)
 bp = ax.boxplot(plot_data)
 plt.show()
-#fig.savefig('boxplot.png', bbox_inches='tight')

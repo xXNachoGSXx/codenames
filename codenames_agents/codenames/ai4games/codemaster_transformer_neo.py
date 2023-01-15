@@ -32,7 +32,7 @@ class ai_codemaster(codemaster):
 		#write any initializing code here
 
 		# DEFINE THRESHOLD VALUE
-		self.dist_threshold = 0.3
+		self.dist_threshold = 0.15
 
 
 
