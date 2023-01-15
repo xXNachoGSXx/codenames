@@ -1,6 +1,3 @@
-# GUESSER TRANSFORMER
-# CODE BY CATALINA JARAMILLO
-
 from players.guesser import guesser
 
 import torch

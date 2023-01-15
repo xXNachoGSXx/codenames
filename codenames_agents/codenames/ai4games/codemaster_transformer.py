@@ -1,7 +1,3 @@
-# TRANSFORMER CODEMASTER
-# CODE BY CATALINA JARAMILLO
-
-
 import nltk
 from nltk.stem import WordNetLemmatizer
 from nltk.stem.lancaster import LancasterStemmer
