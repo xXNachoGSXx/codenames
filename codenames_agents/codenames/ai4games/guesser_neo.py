@@ -22,8 +22,8 @@ class ai_guesser(guesser):
     def __init__(self, brown_ic=None, glove_vecs=None, word_vectors=None):
         torch.set_grad_enabled(False)
 
-        self.tokenizer = GPT2Tokenizer.from_pretrained("gpt2")
-        self.model = AutoModelForCausalLM.from_pretrained("gpt2")
+        self.tokenizer = GPT2Tokenizer.from_pretrained("EleutherAI/gpt-neo-1.3B")
+        self.model = AutoModelForCausalLM.from_pretrained("EleutherAI/gpt-neo-1.3B")
 
         self.curGuesses = []
 

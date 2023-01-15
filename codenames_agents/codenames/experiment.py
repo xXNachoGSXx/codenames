@@ -2,11 +2,11 @@ import os
 import subprocess
 
 #define config variables
-NUM_EXP = 5
+NUM_EXP = 20
 
 #algorithms to use (assuming in ai4games folder)
-CODEMASTER = ["transformer_weighted"]
-GUESSER = ["transformer"]
+CODEMASTER = ["transformer_neo" , "transformer_weighted"]
+GUESSER = ["neo","transformer"]
 
 OUTPUT_FILE = "30weight_exp_results.csv"		#where to print the results of each pairing
 
@@ -32,8 +32,8 @@ for i in range(len(CODEMASTER)):
 			endCt = [g for g in lines if "Game Counter:" in g]
 
 			#print(lines[-2])
-
-			turns = int(lines[lines.index(endCt[0])].split(": ")[1])
+			if (len(endCt)>0):
+				turns = int(lines[lines.index(endCt[0])].split(": ")[1])		
 			print(turns)
 			turnTable.append(turns)
 

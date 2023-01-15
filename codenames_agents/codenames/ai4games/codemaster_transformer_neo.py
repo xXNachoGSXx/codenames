@@ -38,8 +38,8 @@ class ai_codemaster(codemaster):
 
 		# 1. GET EMBEDDING FOR RED WORDS USING GPT2
 		torch.set_grad_enabled(False)
-		self.tokenizer = GPT2Tokenizer.from_pretrained("gpt2")
-		self.model = AutoModelForCausalLM.from_pretrained("gpt2")
+		self.tokenizer = GPT2Tokenizer.from_pretrained("EleutherAI/gpt-neo-1.3B")
+		self.model = AutoModelForCausalLM.from_pretrained("EleutherAI/gpt-neo-1.3B")
 
 		#get stop words and what-not
 		nltk.download('popular',quiet=True)
